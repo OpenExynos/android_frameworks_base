@@ -708,7 +708,6 @@ please see styles_device_defaults.xml.
         <item name="indeterminateProgressStyle">@style/Widget.Holo.ProgressBar</item>
         <item name="progressBarPadding">32dip</item>
         <item name="itemPadding">8dip</item>
-        <item name="paddingEnd">15dip</item>
     </style>
 
     <style name="Widget.Holo.ActionBar.Solid">

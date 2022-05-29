@@ -19,7 +19,7 @@
               android:id="@+id/date_picker_header"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:paddingBottom="1dp"
+              android:paddingBottom="18dp"
               android:paddingStart="?attr/dialogPreferredPadding"
               android:paddingEnd="?attr/dialogPreferredPadding"
               android:orientation="vertical">
@@ -30,17 +30,16 @@
         android:id="@+id/date_picker_header_year"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="1dp"
-        android:gravity="center"
+        android:paddingTop="16dp"
         android:textAppearance="@style/TextAppearance.Material.DatePicker.YearLabel" />
 
     <TextView
         android:id="@+id/date_picker_header_date"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="@style/TextAppearance.Material.DatePicker.DateLabel"
+        android:gravity="start"
         android:maxLines="2"
-        android:gravity="center"
         android:ellipsize="none" />
 
 </LinearLayout>

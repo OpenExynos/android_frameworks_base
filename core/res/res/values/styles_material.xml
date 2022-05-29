@@ -492,7 +492,7 @@ please see styles_device_defaults.xml.
 
     <!-- Alert dialog button bar button -->
     <style name="Widget.Material.Button.ButtonBar.AlertDialog" parent="Widget.Material.Button.Borderless.Colored">
-        <item name="minWidth">48dp</item>
+        <item name="minWidth">64dp</item>
         <item name="minHeight">@dimen/alert_dialog_button_bar_height</item>
     </style>
 
@@ -856,7 +856,6 @@ please see styles_device_defaults.xml.
     <style name="Widget.Material.PopupMenu.Overflow">
         <item name="overlapAnchor">true</item>
         <item name="dropDownHorizontalOffset">-4dip</item>
-        <item name="dropDownVerticalOffset">20dip</item>
     </style>
 
     <style name="Widget.Material.ActionButton">

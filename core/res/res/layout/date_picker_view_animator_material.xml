@@ -24,18 +24,10 @@
     android:outAnimation="@anim/date_picker_fade_out_material"
     android:measureAllChildren="true">
 
-
-        <ScrollView
-            android:layout_width="170dp"
-            android:layout_height="120dip"
-            android:scrollbarStyle="outsideInset" >
-
     <android.widget.DayPickerView
         android:id="@+id/date_picker_day_picker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-
-</ScrollView>
 
     <android.widget.YearPickerView
         android:id="@+id/date_picker_year_picker"

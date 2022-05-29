@@ -817,7 +817,7 @@ public final class Configuration implements Parcelable, Comparable<Configuration
      * Set this object to the system defaults.
      */
     public void setToDefaults() {
-        fontScale = 0.8f;
+        fontScale = 1;
         mcc = mnc = 0;
         locale = null;
         userSetLocale = false;
