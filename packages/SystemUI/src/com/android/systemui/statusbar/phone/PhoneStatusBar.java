@@ -946,6 +946,10 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
         // Private API call to make the shadows look better for Recents
         ThreadedRenderer.overrideProperty("ambientRatio", String.valueOf(1.5f));
 
+        StatusBarManager mStatusBarManager = (StatusBarManager) mContext.getSystemService(Context.STATUS_BAR_SERVICE);
+
+        mStatusBarManager.disable(StatusBarManager.DISABLE_EXPAND);
+
         return mStatusBarView;
     }
 
@@ -1202,7 +1206,8 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
         if (shadeEntry == null) {
             return;
         }
-        boolean isHeadsUped = mUseHeadsUp && shouldInterrupt(shadeEntry);
+        // boolean isHeadsUped = mUseHeadsUp && shouldInterrupt(shadeEntry);
+        boolean isHeadsUped = false;
         if (isHeadsUped) {
             mHeadsUpManager.showNotification(shadeEntry);
             // Mark as seen immediately

@@ -218,7 +218,8 @@ key 180   NUMPAD_RIGHT_PAREN
 # key 196 (undefined)
 # key 197 (undefined)
 # key 198 (undefined)
-# key 199 (undefined)
+# 199 BUTTON_12 is used for screen wake-up when watch is seted up 
+key 199 BUTTON_12
 key 200   MEDIA_PLAY
 key 201   MEDIA_PAUSE
 # key 202 "KEY_PROG3"

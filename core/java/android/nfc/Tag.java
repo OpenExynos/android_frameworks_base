@@ -447,7 +447,7 @@ public final class Tag implements Parcelable {
     };
 
     /**
-     * For internal use only.
+     * For inter use only.
      *
      * @hide
      */
@@ -460,7 +460,7 @@ public final class Tag implements Parcelable {
     }
 
     /**
-     * For internal use only.
+     * For inter use only.
      *
      * @hide
      */
@@ -469,7 +469,7 @@ public final class Tag implements Parcelable {
     }
 
     /**
-     * For internal use only.
+     * For inter use only.
      *
      * @hide
      */

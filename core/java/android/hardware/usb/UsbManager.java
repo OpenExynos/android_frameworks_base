@@ -232,6 +232,86 @@ public class UsbManager {
     public static final String USB_FUNCTION_ACCESSORY = "accessory";
 
     /**
+     * Name of the MTP and ADB USB function.
+     * Used in extras for the {@link #ACTION_USB_STATE} broadcast
+     *
+     * {@hide}
+     */
+    public static final String USB_FUNCTION_MTP_ADB = "mtp,adb";
+
+    /**
+     * Name of the RNDIS and ADB USB function.
+     * Used in extras for the {@link #ACTION_USB_STATE} broadcast
+     *
+     * {@hide}
+     */
+    public static final String USB_FUNCTION_RNDIS_ADB = "rndis,adb";
+
+    /**
+     * Name of the PTP and ADB USB function.
+     * Used in extras for the {@link #ACTION_USB_STATE} broadcast
+     *
+     * {@hide}
+     */
+    public static final String USB_FUNCTION_PTP_ADB = "ptp,adb";
+
+    /**
+     * Name of the RNDIS and DM USB function.
+     * Used in extras for the {@link #ACTION_USB_STATE} broadcast
+     *
+     * {@hide}
+     */
+    public static final String USB_FUNCTION_RNDIS_DM = "rndis,dm";
+
+    /**
+     * Name of the RNDIS, ACM and DM USB function.
+     * Used in extras for the {@link #ACTION_USB_STATE} broadcast
+     *
+     * {@hide}
+     */
+    public static final String USB_FUNCTION_RNDIS_ACM_DM = "rndis,acm,dm";
+
+    /**
+     * Name of the RNDIS, ACM, DM and ADB USB function.
+     * Used in extras for the {@link #ACTION_USB_STATE} broadcast
+     *
+     * {@hide}
+     */
+    public static final String USB_FUNCTION_RNDIS_ACM_DM_ADB = "rndis,acm,dm,adb";
+
+    /**
+     * Name of the RNDIS and DIAG USB function.
+     * Used in extras for the {@link #ACTION_USB_STATE} broadcast
+     *
+     * {@hide}
+     */
+    public static final String USB_FUNCTION_RNDIS_DIAG = "rndis,diag";
+
+    /**
+     * Name of the DM, ACM, and ADB USB function.
+     * Used in extras for the {@link #ACTION_USB_STATE} broadcast
+     *
+     * {@hide}
+     */
+    public static final String USB_FUNCTION_DM_ACM_ADB = "dm,acm,adb";
+
+    /**
+     * Name of the DIAG and ACM USB function.
+     * Used in extras for the {@link #ACTION_USB_STATE} broadcast
+     *
+     * {@hide}
+     */
+    public static final String USB_FUNCTION_DIAG_ACM = "diag,acm";
+
+    /**
+     * Name of the RNDIS, ACM, and DIAG USB function.
+     * Used in extras for the {@link #ACTION_USB_STATE} broadcast
+     *
+     * {@hide}
+     */
+    public static final String USB_FUNCTION_RNDIS_ACM_DIAG = "rndis,acm,diag";
+
+    /**
      * Name of extra for {@link #ACTION_USB_PORT_CHANGED}
      * containing the {@link UsbPort} object for the port.
      *
@@ -268,6 +348,7 @@ public class UsbManager {
      * or {@link #requestPermission(UsbAccessory, PendingIntent)}
      * containing a boolean value indicating whether the user granted permission or not.
      */
+
     public static final String EXTRA_PERMISSION_GRANTED = "permission";
 
     private final Context mContext;

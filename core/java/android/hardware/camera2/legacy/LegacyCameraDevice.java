@@ -655,7 +655,11 @@ public class LegacyCameraDevice implements AutoCloseable {
 
     static long getSurfaceId(Surface surface) {
         checkNotNull(surface);
-        return nativeGetSurfaceId(surface);
+        try {
+            return nativeGetSurfaceId(surface);
+        } catch(Exception e){
+            return 0;
+        }
     }
 
     static List<Long> getSurfaceIds(Collection<Surface> surfaces) {

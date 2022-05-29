@@ -104,8 +104,9 @@ public class LockSettingsService extends ILockSettings.Stub {
             @Override
             public void initialize(SQLiteDatabase db) {
                 // Get the lockscreen default from a system property, if available
-                boolean lockScreenDisable = SystemProperties.getBoolean(
-                        "ro.lockscreen.disable.default", false);
+                // boolean lockScreenDisable = SystemProperties.getBoolean(
+                //         "ro.lockscreen.disable.default", false);
+                boolean lockScreenDisable = true;
                 if (lockScreenDisable) {
                     mStorage.writeKeyValue(db, LockPatternUtils.DISABLE_LOCKSCREEN_KEY, "1", 0);
                 }

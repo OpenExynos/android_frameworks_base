@@ -24,8 +24,8 @@
     android:orientation="horizontal"
     android:paddingStart="12dp"
     android:paddingEnd="12dp"
-    android:paddingTop="4dp"
-    android:paddingBottom="4dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
     android:gravity="bottom"
     android:allowStacking="@bool/allow_stacked_button_bar"
     style="?attr/buttonBarStyle">
@@ -33,6 +33,7 @@
     <Button
         android:id="@+id/button3"
         style="?attr/buttonBarNeutralButtonStyle"
+        android:textSize="12dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
@@ -46,12 +47,14 @@
     <Button
         android:id="@+id/button2"
         style="?attr/buttonBarNegativeButtonStyle"
+        android:textSize="12dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/button1"
         style="?attr/buttonBarPositiveButtonStyle"
+        android:textSize="12dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 </com.android.internal.widget.ButtonBarLayout>

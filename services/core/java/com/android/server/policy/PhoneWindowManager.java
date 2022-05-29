@@ -978,6 +978,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
         }
     }
 
+   
     private void interceptPowerKeyUp(KeyEvent event, boolean interactive, boolean canceled) {
         final boolean handled = canceled || mPowerKeyHandled;
         mScreenshotChordPowerKeyTriggered = false;
@@ -5083,6 +5084,12 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                 break;
             }
 
+            case KeyEvent.KEYCODE_BUTTON_12: { //wake-up when watch is seted up
+                result &= ~ACTION_PASS_TO_USER;
+                wakeUp(event.getEventTime(), mAllowTheaterModeWakeFromKey, "android.policy:KEY");
+                break;
+            }
+
             case KeyEvent.KEYCODE_SLEEP: {
                 result &= ~ACTION_PASS_TO_USER;
                 isWakeKey = false;
@@ -5188,6 +5195,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
             case KeyEvent.KEYCODE_POWER:
             case KeyEvent.KEYCODE_WAKEUP:
             case KeyEvent.KEYCODE_SLEEP:
+            case KeyEvent.KEYCODE_BUTTON_12:
                 return false;
             default:
                 return true;

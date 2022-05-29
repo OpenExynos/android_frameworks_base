@@ -1590,6 +1590,24 @@ public final class NfcAdapter {
         }
     }
 
+/* START [P1605260002] - Add Samsung NFC Adapter for Sec NFC */
+/**
+ * @hide
+ */
+    public INfcSecAdapter getNfcSecAdapterInterface() {
+        if (mContext == null) {
+            throw new UnsupportedOperationException("You need a context on NfcAdapter to use the "
+                + " NFC SEC APIs");
+        }
+        try {
+            return sService.getNfcSecAdapterInterface(mContext.getPackageName());
+        } catch (RemoteException e) {
+            attemptDeadServiceRecovery(e);
+            return null;
+        }
+    }
+/* END [P1605260002] - Add Samsung NFC Adapter for Sec NFC */
+
     void enforceResumed(Activity activity) {
         if (!activity.isResumed()) {
             throw new IllegalStateException("API cannot be called while activity is paused");

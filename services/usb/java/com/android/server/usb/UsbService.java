@@ -313,6 +313,18 @@ public class UsbService extends IUsbManager.Stub {
             case UsbManager.USB_FUNCTION_MTP:
             case UsbManager.USB_FUNCTION_PTP:
             case UsbManager.USB_FUNCTION_RNDIS:
+
+            /* Additional function strings for development */
+            case UsbManager.USB_FUNCTION_MTP_ADB:
+            case UsbManager.USB_FUNCTION_RNDIS_ADB:
+            case UsbManager.USB_FUNCTION_PTP_ADB:
+            case UsbManager.USB_FUNCTION_RNDIS_DM:
+            case UsbManager.USB_FUNCTION_RNDIS_ACM_DM:
+            case UsbManager.USB_FUNCTION_RNDIS_ACM_DM_ADB:
+            case UsbManager.USB_FUNCTION_RNDIS_DIAG:
+            case UsbManager.USB_FUNCTION_DM_ACM_ADB:
+            case UsbManager.USB_FUNCTION_DIAG_ACM:
+            case UsbManager.USB_FUNCTION_RNDIS_ACM_DIAG:
                 return true;
         }
 
