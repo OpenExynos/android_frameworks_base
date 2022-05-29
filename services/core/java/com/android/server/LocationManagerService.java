@@ -2057,7 +2057,8 @@ public class LocationManagerService extends ILocationManager.Stub {
 
         LocationProviderInterface provider = mProvidersByName.get(name);
         if (provider == null) {
-            throw new IllegalArgumentException("provider doesn't exist: " + name);
+//[HACK]need customers modification
+//            throw new IllegalArgumentException("provider doesn't exist: " + name);
         }
 
         UpdateRecord record = new UpdateRecord(name, request, receiver);

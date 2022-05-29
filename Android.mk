@@ -244,6 +244,7 @@ LOCAL_SRC_FILES += \
 	core/java/android/nfc/INfcAdapter.aidl \
 	core/java/android/nfc/INfcAdapterExtras.aidl \
 	core/java/android/nfc/INfcTag.aidl \
+	core/java/android/nfc/INfcSecAdapter.aidl \
 	core/java/android/nfc/INfcCardEmulation.aidl \
 	core/java/android/nfc/INfcFCardEmulation.aidl \
 	core/java/android/nfc/INfcUnlockHandler.aidl \

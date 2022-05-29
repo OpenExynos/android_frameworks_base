@@ -434,8 +434,14 @@ bool EglManager::swapBuffers(const Frame& frame, const SkRect& screenDirty) {
         ALOGW("swapBuffers encountered EGL error %d on %p, halting rendering...",
                 err, frame.mSurface);
         return false;
+    } else if(err == EGL_BAD_NATIVE_WINDOW) {
+        // For some reason our surface context is invalid. So, EGL_BAD_NATIVE_WINDOW err in eglSwapBuffers
+        // This really shouldn't happen, but if it does we can recover easily
+        // by just not trying to use the surface anymore.
+        ALOGW("swapBuffers encountered EGL_BAD_NATIVE_WINDOW on %p, halting rendering...", surface);
+        return false;
     }
-    LOG_ALWAYS_FATAL("Encountered EGL error %d %s during rendering",
+        LOG_ALWAYS_FATAL("Encountered EGL error %d %s during rendering",
             err, egl_error_str(err));
     // Impossible to hit this, but the compiler doesn't know that
     return false;

@@ -51,6 +51,25 @@ public final class ScanSettings implements Parcelable {
      */
     public static final int SCAN_MODE_LOW_LATENCY = 2;
 
+    //SCSC_INTERNAL START -> Do not integrate to customer branches
+    /**
+     * SSB-13899 Add support for new SCAN intervals in Android-M
+     * Added additional SCAN Modes for Testing
+     */
+    /** @hide */
+    public static final int SCAN_MODE_2_PERCENT_DUTY_CYCLE = 3;
+    /** @hide */
+    public static final int SCAN_MODE_5_PERCENT_DUTY_CYCLE = 4;
+    /** @hide */
+    public static final int SCAN_MODE_49_PERCENT_DUTY_CYCLE = 5;
+    /** @hide */
+    public static final int SCAN_MODE_FAST_SCAN_AUTO = 6;
+    /** @hide */
+    public static final int SCAN_MODE_SLOW_SCAN_AUTO = 7;
+    /** @hide */
+    public static final int SCAN_MODE_TEST = 8;
+    //SCSC_INTERNAL END -> Do not integrate to customer branches
+
     /**
      * Trigger a callback for every Bluetooth advertisement found that matches the filter criteria.
      * If no filter is active, all advertisement packets are reported.
@@ -277,7 +296,15 @@ public final class ScanSettings implements Parcelable {
          * @throws IllegalArgumentException If the {@code scanMode} is invalid.
          */
         public Builder setScanMode(int scanMode) {
-            if (scanMode < SCAN_MODE_OPPORTUNISTIC || scanMode > SCAN_MODE_LOW_LATENCY) {
+            //SCSC_INTERNAL START -> Do not integrate to customer branches
+            /**
+             * SSB-13899 Add support for new SCAN intervals in Android-M
+             * Added additional SCAN Modes for Testing.
+             */
+            //if (scanMode < SCAN_MODE_OPPORTUNISTIC || scanMode > SCAN_MODE_LOW_LATENCY) {
+            //Note: When removing this if statement (below), please make sure the above if statement is uncommented again.
+            if (scanMode < SCAN_MODE_OPPORTUNISTIC || scanMode > SCAN_MODE_TEST) {
+            //SCSC_INTERNAL END -> Do not integrate to customer branches
                 throw new IllegalArgumentException("invalid scan mode " + scanMode);
             }
             mScanMode = scanMode;

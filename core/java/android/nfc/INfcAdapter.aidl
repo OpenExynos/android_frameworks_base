@@ -24,6 +24,9 @@ import android.nfc.Tag;
 import android.nfc.TechListParcel;
 import android.nfc.IAppCallback;
 import android.nfc.INfcAdapterExtras;
+/* START [P1605260002] - Add Samsung NFC Adapter for Sec NFC */
+import android.nfc.INfcSecAdapter;
+/* END [P1605260002] - Add Samsung NFC Adapter for Sec NFC */
 import android.nfc.INfcTag;
 import android.nfc.INfcCardEmulation;
 import android.nfc.INfcFCardEmulation;
@@ -41,6 +44,9 @@ interface INfcAdapter
     INfcCardEmulation getNfcCardEmulationInterface();
     INfcFCardEmulation getNfcFCardEmulationInterface();
     INfcAdapterExtras getNfcAdapterExtrasInterface(in String pkg);
+/* START [P1605260002] - Add Samsung NFC Adapter for Sec NFC */
+    INfcSecAdapter getNfcSecAdapterInterface(in String pkg);
+/* END [P1605260002] - Add Samsung NFC Adapter for Sec NFC */
     INfcDta getNfcDtaInterface(in String pkg);
     int getState();
     boolean disable(boolean saveState);

@@ -271,10 +271,8 @@ public class RequestThreadManager {
         if (VERBOSE) {
             Log.v(TAG, "stopPreview - preview running? " + mPreviewRunning);
         }
-        if (mPreviewRunning) {
-            mCamera.stopPreview();
-            mPreviewRunning = false;
-        }
+        mCamera.stopPreview();
+        mPreviewRunning = false;
     }
 
     private void startPreview() {
